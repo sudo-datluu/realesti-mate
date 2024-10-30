@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "RealestiMate",
   description: "Your mate real estate resource",
   icons: {
-    icon: '/icons/logo.svg',
+    icon: '/icons/logo/favicon.ico',
   }
 };
 

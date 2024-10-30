@@ -14,7 +14,7 @@ const LeftSideBar = () => {
     <section className='left_sidebar'>
         <nav className='flex flex-col gap-6'>
             <Link href='/' className='flex cursor-pointer items-center gap-1 pb-10 max-lg:justify-center'>
-                <Image src="/icons/logo.svg" alt='logo' width={48} height={48}/>
+                <Image src="/icons/logo/android-chrome-192x192.png" alt='logo' width={48} height={48}/>
                 <h1 className='text-24 font-extrabold text-white max-lg:hidden'>Realesti Mate</h1>
             </Link>
         </nav>

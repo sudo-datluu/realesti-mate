@@ -1,0 +1,250 @@
+WEBVTT
+
+1
+00:00:02.290 --> 00:00:08.320
+Le Tuan Dat Luu: Hello, everyone. Welcome to the presentation of HD testing group. Today, we will
+
+2
+00:00:08.500 --> 00:00:14.079
+Le Tuan Dat Luu: giving a presentation about our online grocery store about system test report
+
+3
+00:00:14.110 --> 00:00:23.946
+Le Tuan Dat Luu: first, st I will give you an overview of our project. So this is an online grocery store system testing
+
+4
+00:00:24.340 --> 00:00:47.080
+Le Tuan Dat Luu: it will browse. We will act as tester in a application for shopping shopping, online shopping application with specific specific functionalities. And we validate the system based on the base based on the the features to detect some potential effects
+
+5
+00:00:47.589 --> 00:01:08.650
+Le Tuan Dat Luu: the score of the test, we will focus on the function functionality as far as the document validation of the application. But we will not include the performance or the security of the application so that the limitation of the project is that only the the
+
+6
+00:01:09.000 --> 00:01:24.189
+Le Tuan Dat Luu: the inside of the document can be include. If there's something like outside of the document. We cannot validate that the other things is maybe the ui components is not prioritized to be tested.
+
+7
+00:01:24.450 --> 00:01:26.660
+Le Tuan Dat Luu: Next up is our team organization.
+
+8
+00:01:27.020 --> 00:01:49.399
+Duy Thuong: Okay, Hello, everyone. So our team operated with a collaborative structure, each member focusing on specific functionalities, as you can see here, like the lead tester. He managed the product browsing and search functionalities and means. He, you can handle the Admin access and answering that secure access to user data.
+
+9
+00:01:49.440 --> 00:02:09.780
+Duy Thuong: and next will be the Sneha sneha, Anand focus on the shipping cut and other processes. And finally, our last member work on something cut Updates and consistency. So this role-based approach allow us to streamline tasks and ensure quality testing across key areas.
+
+10
+00:02:12.613 --> 00:02:31.570
+Duc Duy Nguyen: Okay? So based on the requirements. I have list out, the main functionalities of the website. This include product listing and category filtering keyword, searching functionality shopping, cart functionality, order, placement, delivery details and checkout user purchase history, viewing
+
+11
+00:02:31.580 --> 00:02:35.428
+Duc Duy Nguyen: and admin access to order and management.
+
+12
+00:02:36.520 --> 00:02:46.670
+Duc Duy Nguyen: so I organize them into a dependency graph to show us the dependency of the functionality for the testing procedure purposes.
+
+13
+00:02:47.166 --> 00:02:49.030
+Duc Duy Nguyen: And another thing is.
+
+14
+00:02:50.758 --> 00:03:08.590
+Duc Duy Nguyen: the shopping cart functionality have a lot of features. So that's why we are dedicating 2 persons to test these features. Because it is, it includes, add to cart features card displaying card details cart, update cart, persist and cart validations.
+
+15
+00:03:13.420 --> 00:03:25.129
+Sneha Anand: Hi everyone. So our testing approach is based on the main functionalities of the system. That is the core functionalities. And we are covering both the customer and admin side functionalities of the website.
+
+16
+00:03:25.800 --> 00:03:34.989
+Sneha Anand: The task is distributed among the team members based on the dependency among the different functionalities, the timeline and the complexity of each task.
+
+17
+00:03:35.360 --> 00:03:45.480
+Sneha Anand: The success criteria of a project will be based on how many high priority functions the system is able to perform that is based on our test cases.
+
+18
+00:03:45.600 --> 00:03:48.790
+Sneha Anand: We have distributed the bus
+
+19
+00:03:49.010 --> 00:03:52.099
+Sneha Anand: based on the medium high priority listed.
+
+20
+00:03:52.120 --> 00:04:03.090
+Sneha Anand: So the high priority bugs address to ensure the call functionalities and overall success of the project. So we should be able to identify all the high priority bugs, and it should be fixed to
+
+21
+00:04:04.420 --> 00:04:06.920
+Sneha Anand: and ensure the functionality of the system.
+
+22
+00:04:07.130 --> 00:04:22.639
+Sneha Anand: So the task is distributed among the team members based on the dependency and the complexity. So we have the main product listing that is browsing the categories in the website. Then we have the search functionality based on keywords
+
+23
+00:04:22.720 --> 00:04:34.890
+Sneha Anand: and the shopping cart functionality, which is a core functionality of the website. So we have distributed it among the 3 members. And we have completely tested that functionality from different perspectives.
+
+24
+00:04:35.010 --> 00:04:40.270
+Sneha Anand: And another important function is the order placement which include the validation of the
+
+25
+00:04:40.280 --> 00:04:57.269
+Sneha Anand: delivery details and also the delivery address, phone number email address. Everything should be checked during the order placement. After the order placement, the confirmation will happen which will be updating the database and which will be sending a confirmation mail to the user.
+
+26
+00:04:58.240 --> 00:05:07.390
+Sneha Anand: And the final one is the admin access which has a completely different login process, and the Admin can view all the purchase history of the users
+
+27
+00:05:07.430 --> 00:05:13.419
+Sneha Anand: so based on the dependency between this functionalities. We have distributed it among the team members.
+
+28
+00:05:17.800 --> 00:05:25.300
+Duc Duy Nguyen: Okay? So the 1st 3 size case including the shopping shopping cart functionality.
+
+29
+00:05:25.340 --> 00:05:29.239
+Duc Duy Nguyen: So the 1st one is trying to delete a card item, when
+
+30
+00:05:29.880 --> 00:05:34.190
+Duc Duy Nguyen: when adding a an item to the cart. So
+
+31
+00:05:34.220 --> 00:05:44.109
+Duc Duy Nguyen: the second one is calculating the total price, and we want to ensure that the the price listed in the product product listing page is met is matched with the
+
+32
+00:05:44.540 --> 00:05:49.090
+Duc Duy Nguyen: total price in the cart. The 3rd one is adjusting the
+
+33
+00:05:49.110 --> 00:05:57.550
+Duc Duy Nguyen: item count and to see the behavior. So we want to adjust the item in the shopping cart, and we it. We hope that it will reflect correctly.
+
+34
+00:06:00.350 --> 00:06:05.680
+Le Tuan Dat Luu: Cool. So the nitro tree test K, the 1st one, I will test the search mob
+
+35
+00:06:06.048 --> 00:06:23.600
+Le Tuan Dat Luu: the search functionality when user to enter some keywords on the website to show the the the items that relate to the keyword. The second one test. The second test guy test is a subcategory test guide to make sure that items on the subcategories
+
+36
+00:06:24.388 --> 00:06:47.649
+Le Tuan Dat Luu: coming within the main category as well. And the the 3rd one I test is, I verify we if the items suddenly, like out of style, it can it will show the error message for for the order and make sure that the order information can be entered within the right delivery detail.
+
+37
+00:06:56.870 --> 00:07:20.710
+Duy Thuong: Oh, okay. So, moving on to the next. Okay, we will look at from T, 1 0, 1 0 to T, 1 0, 1, 2 which emphasize, secure and accurate system functionality. So the 1st one et 1 0, 1 0, which is admin access, validation. So we tested that only admin users could assess on user purchase data preventing unauthorized access to sensitive information. And the next one et one oh.
+
+38
+00:07:20.710 --> 00:07:33.899
+Duy Thuong: 1 1, which is a card retention. This test verifies that items in the card stay for at least 20 min of inactivity which is critical for user experience, continuity, and the last one
+
+39
+00:07:34.060 --> 00:07:44.670
+Duy Thuong: is the admin credential validation, ensuring that secure admins access by validating credentials strictly, and denying access with incorrect credentials.
+
+40
+00:07:48.830 --> 00:07:52.410
+Sneha Anand: So the 3 test cases I have created are like.
+
+41
+00:07:52.520 --> 00:07:56.359
+Sneha Anand: the 1st one is to verify the add to cart button functionality
+
+42
+00:07:56.650 --> 00:08:07.009
+Sneha Anand: for both the in stock and out stock items if the item is in stock, the add to cart button should be increasing the quantity of the item in the
+
+43
+00:08:07.180 --> 00:08:13.860
+Sneha Anand: shopping cart, and if it is out of stock the button should not be clickable, and it should not be added to the shopping cart.
+
+44
+00:08:14.120 --> 00:08:18.380
+Sneha Anand: And for the email validation during the order placement.
+
+45
+00:08:27.150 --> 00:08:29.000
+Duy Thuong: Okay, so.
+
+46
+00:08:31.220 --> 00:08:36.030
+Duc Duy Nguyen: Okay? So for the defect register the 1st 2 defects.
+
+47
+00:08:36.405 --> 00:08:50.380
+Duc Duy Nguyen: It's from mine. So the 1st effect I found is from the test that we try to remove an item from the shopping cart. So when we try to remove the item, it, it's item is not actually deleted.
+
+48
+00:08:50.400 --> 00:08:54.200
+Duc Duy Nguyen: but the the item count is displaying zeros
+
+49
+00:08:54.649 --> 00:09:09.570
+Duc Duy Nguyen: and the second defect that I found is the price of the item of the shopping cart is not matched with the. It doesn't match with the price listed on the homepage for for items with values greater than $5.
+
+50
+00:09:13.390 --> 00:09:17.719
+Duy Thuong: So the the next. The 2 defects are. We
+
+51
+00:09:17.750 --> 00:09:25.011
+Duy Thuong: also encounter that highlight highlighted the vulner vulnerabilities. So the 1st effect is,
+
+52
+00:09:25.890 --> 00:09:47.079
+Duy Thuong: is that the system lack validation for the mobile number field in the order form, allowing alphabetic and special character which impacts the data integrity, and the next one is the 103 which the high severity issue was filed where the Admin base could be assessed in incognito.
+
+53
+00:09:47.080 --> 00:09:56.860
+Duy Thuong: more by directly pasting the link, bypassing the authentication, so addressing the issues, help us enhance security and reliability in the application.
+
+54
+00:10:01.490 --> 00:10:02.120
+Le Tuan Dat Luu: Yeah.
+
+55
+00:10:03.659 --> 00:10:20.270
+Le Tuan Dat Luu: Yeah. So the next 2 defects that I found the 1st one is actually the requirement it mentioned in the requirement. There's a admin credential for login, but it won't say it, or mention any mechanisms of login pages or any pages. Ui.
+
+56
+00:10:20.270 --> 00:10:36.070
+Le Tuan Dat Luu: so that a tester can test this credential. The second one that I thought is that when I try to add out of stock items to cart is still able to add it to the cart, and I still can process the order further.
+
+57
+00:10:38.930 --> 00:10:43.689
+Sneha Anand: So the next effect is again based on the add to cart functionality. If the
+
+58
+00:10:43.730 --> 00:10:49.539
+Sneha Anand: item is in stock, and if you press the add to cart button. Again, it should be increasing the quantity in the
+
+59
+00:10:49.700 --> 00:11:04.109
+Sneha Anand: card. But it is not working as expected. And another defect is based on the email validation during order placement. Even if the order placement page is submitted without email address, it is
+
+60
+00:11:04.130 --> 00:11:09.480
+Sneha Anand: proceeding to the confirmation which has not happened so that the user will not get a confirmation.
+
+61
+00:11:12.840 --> 00:11:34.350
+Duy Thuong: Okay. So now we come to the fighting and reflection. So for the findings, we identify critical security and validation issues early. Just a unauthorized, unauthorized, I mean assess and unvalidated mobile numbers which strengthens the Platform's security, and we also face some challenges. So this is included the Miss
+
+62
+00:11:34.350 --> 00:11:56.279
+Duy Thuong: S. Cases, like negative card quantities and dependency issues with which delay testing for checkout and order placement. So after this project, we learned that the importance of detail, validation, dependency, planning and early focus on security to improve future testing. So that's the on our presentation. Thank you very much.
+

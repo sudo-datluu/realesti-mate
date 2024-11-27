@@ -31,7 +31,7 @@ geojson_features = db["au-geojson-features"]
 )
 async def get_features(area: str):
     # Todo implement other city
-    if area not in ["sydney"]:
+    if area not in au_postcodes.keys():
         raise HTTPException(status_code=404, detail="Area not found")
     area_postcodes = au_postcodes[area]
     features = await geojson_features.find(
